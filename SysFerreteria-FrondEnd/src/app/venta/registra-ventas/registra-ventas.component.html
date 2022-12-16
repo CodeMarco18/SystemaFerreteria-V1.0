@@ -1,0 +1,43 @@
+<br>
+<div id="content">
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Reguistar Ventas</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="guardar()" #clienteForm="ngForm">
+            <div class="form-group">
+                <label for="idVentas">ID:</label>
+                <input id="idVentas" class="form-control" type="number" name="idVentas" [(ngModel)]="venta.idVentas" required placeholder="Ingrese su ID" minlength="4" maxlength="6">
+            </div>
+            <div class="form-group">
+                <label for="numeroDeComprobante">N° Comprobante:</label>
+                <input id="numeroDeComprobante" class="form-control" type="text" name="numeroDeComprobante" [(ngModel)]="venta.numeroDeComprobante" required placeholder="Ingrese N° Comprobante">
+            </div>
+            <div class="form-group">
+                <label for="totalVentas">Total Ventas:</label>
+                <input id="totalVentas" class="form-control" type="number" name="totalVentas" [(ngModel)]="venta.totalVentas" required placeholder="Ingrese su totalVentas">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input id="fecha" class="form-control" type="date" name="celular" [(ngModel)]="venta.fecha" placeholder="Ingrese Fecha">
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input id="precio" class="form-control" type="number" name="precio" [(ngModel)]="venta.precio" placeholder="Ingrese precio">
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input id="cantidad" class="form-control" type="email" name="cantidad" [(ngModel)]="venta.cantidad" placeholder="Ingrese la Cantidad">
+            </div>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-success" [disabled]="!clienteForm.form.valid">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+</div>
+  <br>
